@@ -1,0 +1,14 @@
+{
+  "name": "sbar-enterprises-site",
+  "version": "1.0.0",
+  "description": "Static site for S Bar Enterprises — no build step required to deploy.",
+  "private": true,
+  "scripts": {
+    "process-photos": "node scripts/process-real-photos.js",
+    "gen-placeholders": "node scripts/gen-placeholders.js"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}
