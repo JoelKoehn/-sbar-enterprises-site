@@ -115,7 +115,7 @@
           <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
           <a class="btn btn-outline" href="tel:+18063338972">Call (806) 333-8972</a>
         </div>
-        <p class="hero-phone-note">Mon&ndash;Fri, 8am&ndash;5pm Arizona time &middot; Serving roughly 200 miles around Surprise, AZ</p>
+        <p class="hero-phone-note">Free, no-obligation quotes &middot; We typically respond within 1 business day &middot; Mon&ndash;Fri, 8am&ndash;5pm Arizona time</p>
       </div>
     </div>
   </section>
@@ -134,6 +134,10 @@
       <div class="trust-stat">
         <span class="num">~200 Mi. Radius</span>
         <span class="label">Evaluated Case-by-Case</span>
+      </div>
+      <div class="trust-stat">
+        <span class="num">1 Business Day</span>
+        <span class="label">Typical Quote Turnaround</span>
       </div>
     </div>
   </section>
@@ -187,7 +191,10 @@
       <ol class="process-steps">
         <li class="process-step">
           <figure>
-            <img src="/images/process/process-1.svg" width="700" height="500" loading="lazy" alt="PLACEHOLDER — real photo needed: owner reviewing a quote request on site">
+            <picture>
+              <source srcset="/images/process/process-1.webp" type="image/webp">
+              <img src="/images/process/process-1.jpg" width="700" height="500" loading="lazy" alt="Reviewing a quote request from the truck, notes on a pad next to a portable building on site">
+            </picture>
           </figure>
           <span class="step-num" aria-hidden="true">1</span>
           <h3>Request Your Quote</h3>
@@ -195,7 +202,10 @@
         </li>
         <li class="process-step">
           <figure>
-            <img src="/images/process/process-2.svg" width="700" height="500" loading="lazy" alt="PLACEHOLDER — real photo needed: customer photographing a shed and the access path for the quote">
+            <picture>
+              <source srcset="/images/process/process-2.webp" type="image/webp">
+              <img src="/images/process/process-2.jpg" width="700" height="500" loading="lazy" alt="Customer photographing a shed and the driveway gate for an accurate quote">
+            </picture>
           </figure>
           <span class="step-num" aria-hidden="true">2</span>
           <h3>Send Us Photos</h3>
@@ -310,35 +320,16 @@
       <div class="section-head">
         <span class="eyebrow">Customer Reviews</span>
         <h2 id="testimonials-heading">What Customers Say</h2>
-        <p>Straight from the people whose buildings we've moved.</p>
       </div>
 
       <!--
-        DRAFT TESTIMONIALS — no verified Google/Facebook reviews were available
-        yet at build time. These are plausible placeholder quotes written in
-        the site's voice, NOT real customer statements. Swap in actual
-        reviews (with permission) as soon as they're collected — check
-        Meta Business Suite > Reviews and Google Business Profile.
+        Honest interim message — no verified reviews collected yet.
+        Replace this whole .testimonials-interim block with real
+        testimonial cards once reviews are gathered (see LAUNCH-CHECKLIST.md).
       -->
-      <div class="testimonials-grid">
-        <article class="testimonial-card">
-          <span class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-          <blockquote>Our gate is barely wide enough for the shed itself, and they still got it through without touching a single fence post. Showed up when they said they would, too.</blockquote>
-          <cite>— Draft placeholder — Surprise, AZ</cite>
-        </article>
-        <article class="testimonial-card">
-          <span class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-          <blockquote>We just needed the shed moved to the other side of the yard, but they treated it like a full delivery — leveled it, checked the door swing, walked us through everything.</blockquote>
-          <cite>— Draft placeholder — Peoria, AZ</cite>
-        </article>
-        <article class="testimonial-card">
-          <span class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-          <blockquote>Called two other companies first and neither would give me a straight answer on timing. These guys quoted it, confirmed access with photos, and hit the date they promised.</blockquote>
-          <cite>— Draft placeholder — Buckeye, AZ</cite>
-        </article>
+      <div class="testimonials-interim">
+        <p>We're still building our public review base — if you'd like to hear from past customers directly, just ask when you call and we'll point you to recent references.</p>
+        <a class="btn btn-outline" href="tel:+18063338972">Call (806) 333-8972</a>
       </div>
     </div>
   </section>
@@ -512,6 +503,11 @@
     </div>
   </div>
 </footer>
+
+<div class="sticky-cta" data-sticky-cta hidden>
+  <a class="btn btn-outline" href="tel:+18063338972">Call Now</a>
+  <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+</div>
 
 <script src="/js/main.js" defer></script>
 </body>

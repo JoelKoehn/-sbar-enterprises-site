@@ -108,4 +108,30 @@
       if (e.key === "ArrowRight") showImage(currentIndex + 1);
     });
   }
+
+  // ---- Sticky mobile call/quote bar ----
+  var stickyCta = document.querySelector("[data-sticky-cta]");
+  var heroSection = document.querySelector(".hero");
+  var quoteSection = document.getElementById("quote");
+
+  if (stickyCta && heroSection && "IntersectionObserver" in window) {
+    var heroVisible = true;
+    var quoteVisible = false;
+
+    var updateStickyCta = function () {
+      stickyCta.hidden = heroVisible || quoteVisible;
+    };
+
+    new IntersectionObserver(function (entries) {
+      heroVisible = entries[0].isIntersecting;
+      updateStickyCta();
+    }).observe(heroSection);
+
+    if (quoteSection) {
+      new IntersectionObserver(function (entries) {
+        quoteVisible = entries[0].isIntersecting;
+        updateStickyCta();
+      }, { threshold: 0.2 }).observe(quoteSection);
+    }
+  }
 })();

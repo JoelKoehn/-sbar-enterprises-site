@@ -593,7 +593,7 @@ section {
 
 @media (min-width: 700px) {
   .trust-bar .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .trust-stat {
@@ -945,6 +945,22 @@ section {
   font-size: 1rem;
 }
 
+.testimonials-interim {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 2.5rem 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-interim p {
+  margin: 0 0 1.25rem;
+  color: var(--steel);
+  font-size: 1.05rem;
+}
+
 /* ==========================================================================
    FAQ
    ========================================================================== */
@@ -1276,4 +1292,38 @@ section {
 
 .success-card h1 {
   color: var(--white);
+}
+
+/* ==========================================================================
+   Sticky mobile call-to-action bar
+   ========================================================================== */
+
+.sticky-cta {
+  display: flex;
+  gap: 0.75rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  background: var(--charcoal);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.sticky-cta[hidden] {
+  display: none;
+}
+
+.sticky-cta .btn {
+  flex: 1;
+  text-align: center;
+  padding-block: 0.7rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .sticky-cta {
+    display: none !important;
+  }
 }
