@@ -703,6 +703,9 @@ section {
   grid-template-columns: 1fr;
   gap: 2rem;
   counter-reset: step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 800px) {
