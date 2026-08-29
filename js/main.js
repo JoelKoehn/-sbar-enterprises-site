@@ -111,7 +111,7 @@
 
   // ---- Sticky mobile call/quote bar ----
   var stickyCta = document.querySelector("[data-sticky-cta]");
-  var heroSection = document.querySelector(".hero");
+  var heroSection = document.querySelector(".hero, [data-sticky-hero]");
   var quoteSection = document.getElementById("quote");
 
   if (stickyCta && heroSection && "IntersectionObserver" in window) {
