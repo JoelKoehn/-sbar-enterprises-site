@@ -38,6 +38,8 @@
     if (stepLabel) stepLabel.textContent = "All done";
     updateDots(questions.length);
 
+    if (window.sbarFireQualifyLead) window.sbarFireQualifyLead();
+
     var summaryEl = resultEl ? resultEl.querySelector("[data-quiz-summary]") : null;
     if (summaryEl) {
       summaryEl.innerHTML = "";

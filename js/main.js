@@ -5,6 +5,22 @@
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ---- GA4 mid-funnel signal: someone engaged with the quote form ----
+  // Fires once per page load, the first time the "name" field is touched.
+  // Also called directly by moveshed.js when the quiz completes, since
+  // that's an earlier and stronger qualification signal on that page.
+  var qualifyLeadSent = false;
+  window.sbarFireQualifyLead = function () {
+    if (qualifyLeadSent) return;
+    qualifyLeadSent = true;
+    if (typeof gtag === "function") gtag("event", "qualify_lead");
+  };
+
+  var nameField = document.getElementById("name");
+  if (nameField) {
+    nameField.addEventListener("focus", window.sbarFireQualifyLead, { once: true });
+  }
+
   // ---- Mobile nav ----
   var navToggle = document.querySelector("[data-nav-toggle]");
   var navClose = document.querySelector("[data-nav-close]");
